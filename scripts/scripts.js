@@ -15,12 +15,23 @@ import {
   getAllMetadata,
   getMetadata,
   decorateBlock,
+  toCamelCase
 } from './lib-franklin.js';
 import {
   addInViewAnimationToSingleElement,
   addInViewAnimationToMultipleElements,
   returnLinkTarget,
 } from '../utils/helpers.js';
+
+const pluginContext = {
+  getAllMetadata,
+  getMetadata,
+  loadCSS,
+  loadScript,
+  sampleRUM,
+  toCamelCase,
+  toClassName,
+};
 
 // Constants here
 const LCP_BLOCKS = ['hero', 'logo-wall']; // add your LCP blocks to the list
