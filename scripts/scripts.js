@@ -15,23 +15,12 @@ import {
   getAllMetadata,
   getMetadata,
   decorateBlock,
-  toCamelCase
 } from './lib-franklin.js';
 import {
   addInViewAnimationToSingleElement,
   addInViewAnimationToMultipleElements,
   returnLinkTarget,
 } from '../utils/helpers.js';
-
-const pluginContext = {
-  getAllMetadata,
-  getMetadata,
-  loadCSS,
-  loadScript,
-  sampleRUM,
-  toCamelCase,
-  toClassName,
-};
 
 // Constants here
 const LCP_BLOCKS = ['hero', 'logo-wall']; // add your LCP blocks to the list
@@ -478,13 +467,14 @@ function decorateBreadcrumb(main) {
     const article = createTag('li', {}, `<a href="${window.location.pathname}">${title}</a>`);
     list.append(article);
 
+    // eslint-disable-next-line no-unused-vars
     const backBtn = createTag('div', { class: 'guides-back-btn desktop' }, `
         <span class="icon icon-icon-arrow"></span>
         <a href="/docs/" class="link-underline-effect">
             Back
         </a>
     `);
-   // document.querySelector('.default-content-wrapper').prepend(backBtn);
+    // document.querySelector('.default-content-wrapper').prepend(backBtn);
   }
 
   // make the last item to be unclickable as already on the page
