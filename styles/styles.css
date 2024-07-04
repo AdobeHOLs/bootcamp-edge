@@ -1518,6 +1518,7 @@ body.guides-template {
 
 body.guides-template main.without-full-width-hero {
   min-height: 900px;
+  margin-top: 4rem;
 }
 
 body.guides-template main .section {
